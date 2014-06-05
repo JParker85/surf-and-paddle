@@ -31,7 +31,7 @@ body{
 
 article{
   float: left;
-  max-width:1000px;
+  max-width:926px;
   padding: 20px;
   margin: 0px 5px 0 100px;
   width:75%;
@@ -45,8 +45,16 @@ aside{
   width: 25%;
   }
 
+aside img{
+
+  border-radius: 50%;
+  max-width: 100px;
+  padding: 0;
+  margin-left: 150px;
+  }
 nav{
   display: inline-block;
+  margin-left: 20px;
 }
 
 h2{
@@ -66,7 +74,7 @@ nav{
   display: inline-block;
 }
 
-.links{
+footer{
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: lighter;

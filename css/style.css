@@ -1,11 +1,10 @@
 
 
 header{
-  background-image: url("/images/sun.jpeg");
-  background-repeat:no-repeat;
+  background: url("../images/sun.jpeg");
   background-size: cover;
   height: 600px;
-
+  overflow: visible;
   }
 
 .title{
@@ -19,7 +18,7 @@ header{
   padding: 60px;
   }
 
-.title h5{
+.title p{
     font-size: 1rem;
     font-weight: lighter;
   }

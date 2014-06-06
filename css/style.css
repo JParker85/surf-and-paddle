@@ -1,9 +1,7 @@
-
-
 header{
   background: url("../images/sun.jpeg");
   background-size: cover;
-  height: 600px;
+  height: 400px;
   overflow: visible;
   }
 
@@ -13,9 +11,11 @@ header{
 
 .title h1{
   color: white;
-  font-size: 10rem;
+  font-size: 5rem;
   font-weight: lighter;
   padding: 60px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
   }
 
 .title p{
@@ -29,37 +29,66 @@ body{
   font-family: 'Open Sans', sans-serif;
   }
 
+.container{
+  max-width:965px;
+  margin: auto;
+  overflow: hidden;
+}
+
 article{
   float: left;
-  max-width:926px;
+  width: 55%;
   padding: 20px;
-  margin: 0px 5px 0 100px;
-  width:75%;
+  margin: 0px;
+  }
+
+.post img{
+  border-radius: 50%;
+  float: left;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  bottom: 34px;
+  }
+  .post{
+    padding: 10px;
+    margin: 10px;
+    float: bottom;
   }
 
 aside{
   float: right;
   padding: 40px;
-  margin: 50px 20px 0 0;
+  /* margin: 50px 20px 0 0; */
   display: inline;
-  width: 25%;
-  }
+  width: 30%;
+}
 
+.border{
+  border-left-style: solid;
+  border-width: 2px;
+
+  border-color:  #666666;
+}
 aside img{
 
   border-radius: 50%;
-  max-width: 100px;
+  height: 75px;
   padding: 0;
   margin-left: 150px;
   }
+
 nav{
-  display: inline-block;
+  display: block;
   margin-left: 20px;
-}
+  }
 
 h2{
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 2rem;
   font-stretch: condensed;
   }
 
@@ -68,15 +97,43 @@ h3{
   font-size: 1rem;
   font-weight: lighter;
   color: #006699;
-  }
-
-nav{
-  display: inline-block;
+  margin-left: 54PX;
 }
 
-footer{
+.buttonText{
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: lighter;
-  color: #006699;
-  }
+  color: #FF0000;
+  position: relative;
+  top: 342px;
+
+  display: inline-block;
+  z-index: 4;
+}
+
+.button{
+  width:25%;
+  display: absolute;
+  float:left;
+}
+
+.button img{
+  z-index:1;
+  height: 378px;
+  width: 100%;
+  position: relative;
+}
+
+#bottomImages{
+  width: 100%;
+}
+
+/*#bottomImages img{
+
+  z-index:1;
+  height: 378px;
+  width: 25%;
+  z-index:1;
+  position: relative;
+} */

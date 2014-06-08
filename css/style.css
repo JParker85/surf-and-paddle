@@ -11,21 +11,28 @@ header{
 
 .title h1{
   color: white;
-  font-size: 5rem;
+  font-size: 9rem;
   font-weight: lighter;
-  padding: 60px;
+  padding-top: 60px;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
   }
 
 .title p{
-    font-size: 1rem;
-    font-weight: lighter;
+  font-weight: lighter;
+  font-family:'Oswald', sans-serif;
+  margin-top: 0;
   }
+
+a:hover{
+  color:red;
+  }
+
+
 
 body{
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-family: 'Open Sans', sans-serif;
   }
 
@@ -33,7 +40,7 @@ body{
   max-width:965px;
   margin: auto;
   overflow: hidden;
-}
+  }
 
 article{
   float: left;
@@ -50,7 +57,7 @@ article{
   width: 75px;
   height: 75px;
   padding: 0;
-  margin-left: 10px;
+  margin: 0 20px 0 10px;
   display: inline-block;
   position: relative;
   bottom: 34px;
@@ -58,50 +65,64 @@ article{
 
 .post{
   padding: 0px;
-  margin: 10px;
+  margin-top: 47px;
   float: bottom;
   }
 
-.post p{
-  padding-top: 10px;
+aside{
+  float: left;
+  position:absolute;
+  padding: 100px 0 0 20px;
+  margin-left: 0px;
+  display: inline;
+  width: 300px;
+  text-align: center;
   }
 
-aside{
-  float: right;
-  position:fixed;
-  padding: 40px;
-  margin-left: 20px;
-  display: inline;
-  width: 25%;
-  text-align: center;
-}
+.ad{
+  height: 200px;
+  width: 300px;
+  }
 
-
+.adLink {
+  text-align: left;
+  float:right;
+  clear:right;
+  margin-left: 10px;
+  }
 
 .border{
   border-left-style: solid;
   border-width: 2px;
 
   border-color:  #666666;
-}
-aside img{
+  }
+
+.avitar{
 
   border-radius: 50%;
   height: 75px;
+  width: 75px;
   padding: 0;
 
 
-  margin-left: 74px;
+  margin-left: 0px;
+  }
+
+aside h3{
+  text-align: center;
   }
 
 nav{
   display: block;
-  margin-left: 105px;
-  }
+  margin-left: 56px;
+  text-align: left;
+  padding-bottom: 39px;
+}
 
 h2{
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 4rem;
   font-stretch: condensed;
   }
 
@@ -110,46 +131,38 @@ h3{
   font-size: 1rem;
   font-weight: lighter;
   color: #006699;
-  margin-left: 86PX;
+  margin-left: 3PX;
+  padding-top: 20px;
 }
 
 .buttonText{
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: lighter;
   color: #FF0000;
   position: relative;
   top: 342px;
   display: inline-block;
-  z-index: 4;
-}
+  z-index: 2;
+  }
 
 .button{
   width:25%;
   display: absolute;
   float:left;
-}
+  }
 
 .button img{
-  z-index:1;
+  z-index: 1;
   height: 378px;
   width: 100%;
   position: relative;
-}
+  }
 
 #center{
   text-align: center;
-}
+  }
 
 #bottomImages{
   width: 100%;
-}
-
-/*#bottomImages img{
-
-  z-index:1;
-  height: 378px;
-  width: 25%;
-  z-index:1;
-  position: relative;
-} */
+  }

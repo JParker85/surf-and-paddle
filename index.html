@@ -6,16 +6,29 @@
     <meta charset="utf-8">
     <title>Sun in the Trees</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" media="screen and (max-width: 320px)" href="css/responsive.css" />
+    <script src="js/modernizr.js" type="text/javascript"></script>
 </head>
 
 <body>
 
-  <header>
-    <div class="title">
+  <header class="container">
 
-    <h1> Sun in the Trees </h1>
-    <p>An Ironyard Academy Project Est. Summer 2014</h>
-    </div>
+    <span>
+
+      <img src="images/tribel_bird_boat_logo_by_goldenstargraphics-d40vqbm.jpg" width= "20px">Sun in the Trees Blog
+
+      <nav id="headerNav">
+        <a id="headerLinks" href="#">About</a>
+        <a id="headerLinks" href="#">Search</a>
+      </nav>
+
+    </span>
+
+      <div class="title">
+        <h1> Sun in the Trees </h1>
+          <p>An Ironyard Academy Project Est. Summer 2014</h>
+      </div>
   </header>
     <div class="container">
       <article>
@@ -25,7 +38,7 @@
 
           <img src= "images/avitar.jpg">
           <span>
-            <p class="article">Birdman<time datetime="2014-09-07" pubdate> on Monday, June 7th 9:22pm </time></p>
+            <p>Birdman<time datetime="2014-09-07" pubdate> on Monday, June 7th 9:22pm </time></p>
           </span>
         </div>
 
@@ -41,7 +54,7 @@
 
       </div>
 
-        <p>Nunc eget diam a orci ultricies commodo. Nam quis consequat nunc. Fusce varius placerat elit vitae porta. Vestibulum sit amet sem commodo, euismod purus et, mattis neque. In porta imperdiet vestibulum. Integer tincidunt gravida nisi in semper. Quisque ut ligula elit. Pellentesque rhoncus leo ac nisl varius, eu fermentum felis auctor. Nunc tempus ligula in lacinia mollis.
+        <p>Nunc eget diam a orci ultricies commodo. Nam quis consequat nunc. Fusce varius placerat elit vitae porta. Vestibulum sit amet sem commodo, euismod purus et, mattis neque. In porta imperdiet vestibulum. Integer tincidunt gravida nisi in semper. Pellentesque rhoncus leo ac nisl varius, eu fermentum felis auctor. Nunc tempus ligula in lacinia mollis.
         </p>
 
       </article>
@@ -54,10 +67,10 @@
 
         <h3>Bird Man</h3>
 
-          <nav>
-              <a href="#">Twitter</a></li>
-              <a href="#">Facebook</a></li>
-              <a href="#">Instagram</a></li>
+          <nav id="social">
+              <a href="#">Twitter</a>
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
           </nav>
 
           <img class="ad" src= "images/ad.jpg">
@@ -75,32 +88,49 @@
       </aside>
   </div>
 
-    <h2 id="center"> Most Popular Posts</h2>
+    <h2 id="buttonTitle"> Most Popular Posts</h2>
 
       <div id="bottomImages">
 
         <div class= "button">
-          <span class= "buttonText">Birdman in Command</span>
-            <a id="bottomLinks" href="#2"><img src="images/bttmImg2.jpg"></a>
+          <h2 class= "buttonText">Birdman in Command</h2>
+            <a id="bottomLinks" href="#1"><img src="images/bttmImg2.jpg"></a>
         </div>
 
         <div class= "button">
-          <span class= "buttonText">His Punch</span>
-            <a id="bottomLinks" href="#1"><img src="images/bttmImg1.jpg"></a>
+          <h2 class= "buttonText">His Punch</h2>
+            <a id="bottomLinks" href="#2"><img src="images/bttmImg1.jpg"></a>
         </div>
 
 <div class= "button">
-  <span class= "buttonText">Birdman the Defender</span>
-    <a id="bottomLinks" href="#4"><img src="images/bttmImg4.jpg"></a>
+  <h2 class= "buttonText">Birdman the Defender</h2>
+    <a id="bottomLinks" href="#3"><img src="images/bttmImg4.jpg"></a>
 </div>
 
         <div class= "button">
-          <span class= "buttonText">Smooth as Ice</span>
-            <a id="bottomLinks" href="#3"><img src="images/bttmImg3.jpg"></a>
+          <h2 class= "buttonText">Smooth as Ice</h2>
+            <a id="bottomLinks" href="#4"><img src="images/bttmImg3.jpg"></a>
         </div>
 
       </div>
 
+        <footer class= "footerContainer">
 
+            <img src="images/Iron-Yard_grey.png" width= "50px">
+
+              <div id= "copyright">
+                <span>
+                  The Ironyard Copyright 2014, All Rights Reserved
+                </span>
+              </div>
+
+                  <nav id= "navPosts">
+                    <a class="border" href="#">Post 1</a>
+                    <a class="border" href="#">Post 2</a>
+                    <a class="border" href="#">Post 3</a>
+                    <a class="border" href="#">Post 4</a>
+                  </nav>
+
+        </footer>
 </body>
 </html>

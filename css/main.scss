@@ -1,3 +1,5 @@
+@import "../bourbon/bourbon.scss";
+
 // Variables
 $text-color: #0033CC;
 $hover-color: #FF0000;
@@ -15,12 +17,13 @@ $name-color: #0033CC;
 
 header{
 
-  background: url("../img/sun.jpeg");
+  @include background-image(url("../img/sun.jpeg"), linear-gradient( blue 100%, transparent 80%));
   background-size: cover;
   height: 400px;
   overflow: visible;
   width: 100%;
-  margin-top: 20px;
+
+
   }
 
 #headerNav{
@@ -31,6 +34,7 @@ header{
   top: 0;
   float:right;
   text-align:center;
+
   }
 
 #headerLinks{
@@ -44,6 +48,7 @@ header{
 .title{
 
   text-align:center;
+  margin-top: 20px;
 
   }
 

@@ -1,18 +1,36 @@
+// Variables
+$text-color: #0033CC;
+$hover-color: #FF0000;
+$buttonTextColor: #FF0000;
+$border-color: #666666;
+$name-color: #0033CC;
+
+//Mixin
+@mixin avitar {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  padding: 0;
+  }
+
 header{
 
-  background: url("../images/sun.jpeg");
+  background: url("../img/sun.jpeg");
   background-size: cover;
   height: 400px;
   overflow: visible;
-
+  width: 100%;
+  margin-top: 20px;
   }
 
 #headerNav{
 
+  display:inline-block;
+  position: relative;
+  right: 0;
+  top: 0;
   float:right;
-  clear:right;
-  text-align: right;
-  display: relative;
+  text-align:center;
   }
 
 #headerLinks{
@@ -50,7 +68,7 @@ header{
 
 a:hover{
 
-  color:red;
+  color: $hover-color;
 
   }
 
@@ -79,15 +97,15 @@ article{
 
   }
 
+.name{
 
+  color: $name-color;
+  }
 
 .post img{
 
-  border-radius: 50%;
+  @include avitar;
   float: left;
-  width: 75px;
-  height: 75px;
-  padding: 0;
   margin: 0 20px 0 10px;
   display: inline-block;
   position: relative;
@@ -135,16 +153,13 @@ aside{
 
   border-left-style: solid;
   border-width: 2px;
-  border-color:  #666666;
+  border-color: $border-color;
 
   }
 
 .avitar{
 
-  border-radius: 50%;
-  height: 75px;
-  width: 75px;
-  padding: 0;
+  @include avitar;
   margin-left: 0px;
 
   }
@@ -177,7 +192,7 @@ h3{
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: lighter;
-  color: #006699;
+  color: $text-color;
   margin-left: 3PX;
   padding-top: 20px;
 
@@ -187,7 +202,7 @@ h3{
 
   text-transform: uppercase;
   font-size: 2em;
-  color: #FF0000;
+  color: $buttonTextColor;
   position: relative;
   top: 300px;
   display: inline-block;
@@ -227,14 +242,6 @@ h3{
 
   }
 
-#navPosts{
-
-  float:right;
-  text-align: right;
-  position: relative;
-
-  }
-
 .bottomLinks img{
 
   display: inline-block;
@@ -242,23 +249,47 @@ h3{
 
   }
 
+#navPosts{
+
+  float:right;
+  clear: both;
+  text-align: right;
+  position: relative;
+  margin-top: 10px;
+  }
+
+footer{
+  width: 100%;
+  display: block;
+  clear: both;
+}
+
 .footerContainer{
 
   max-width: 965px;
   height: 100px;
   margin: auto;
+  margin-top: 30px;
 
   }
 
-.footer span{
+.logo {
+  width: 50px;
+  vertical-align: middle;
+  display: inline;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  }
+
+#footerImg{
 
   float: left;
-
   }
 
 
 #copyright{
 
-margin-left: 100px;
-
+  margin: 20px;
   }

@@ -1,10 +1,14 @@
 header {
-  background-image: url("../img/sun.jpeg"), -webkit-linear-gradient(blue 100%, transparent 80%);
-  background-image: url("../img/sun.jpeg"), linear-gradient(to   , transparent 80%);
+  background-image: url(../img/sun.jpeg);
   background-size: cover;
   height: 400px;
   overflow: visible;
-  width: 100%; }
+  width: 100%;
+  display: block; }
+  @media screen and (max-width: 320px) {
+    header {
+      height: 100px;
+      width: 50%; } }
 
 #headerNav {
   display: inline-block;
@@ -22,66 +26,98 @@ header {
 .title {
   text-align: center;
   margin-top: 20px; }
-
-.title h1 {
-  color: white;
-  font-size: 8rem;
-  font-weight: lighter;
-  padding-top: 97px;
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em; }
-
-.title p {
-  font-weight: lighter;
-  font-family: 'Oswald', sans-serif;
-  margin-top: 0; }
+  .title h1 {
+    color: white;
+    font-size: 6em;
+    font-weight: lighter;
+    padding-top: 97px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em; }
+    @media screen and (max-width: 320px) {
+      .title h1 {
+        font-size: 1em;
+        padding-top: 40px; } }
+  .title p {
+    font-size: 1em;
+    font-weight: lighter;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0; }
+    @media screen and (max-width: 320px) {
+      .title p {
+        font-size: 1em; } }
 
 a:hover {
   color: red; }
 
 body {
+  font-size: 1em;
   margin: 0 auto;
   font-family: 'Oswald', sans-serif;
   font-family: 'Open Sans', sans-serif; }
+  @media screen and (max-width: 320px) {
+    body {
+      font-size: 1em; } }
 
 .container {
-  max-width: 965px;
+  max-width: 960px;
   margin: auto;
   overflow: hidden; }
+  @media screen and (max-width: 320px) {
+    .container {
+      max-width: 320px; } }
 
 article {
   float: left;
-  width: 65%;
+  width: 60%;
   padding: 30px;
-  margin: 0px; }
+  margin: 0px;
+  overflow: auto; }
+  @media screen and (max-width: 320px) {
+    article {
+      width: 100%;
+      margin: 0 20px 0 10px;
+      bottom: 34px; } }
 
 .name {
   color: #0033cc; }
-
-.post img {
-  border-radius: 50%;
-  height: 75px;
-  width: 75px;
-  padding: 0;
-  float: left;
-  margin: 0 20px 0 10px;
-  display: inline-block;
-  position: relative;
-  bottom: 34px; }
 
 .post {
   padding: 0px;
   margin-top: 57px;
   float: bottom; }
+  .post img {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    padding: 0;
+    float: left;
+    margin: 0 20px 0 10px;
+    display: inline-block;
+    position: relative;
+    bottom: 34px; }
+    @media screen and (max-width: 320px) {
+      .post img {
+        height: 75px;
+        width: 75px; } }
+  @media screen and (max-width: 320px) {
+    .post {
+      margin-top: 10px; } }
 
 aside {
   float: left;
   position: absolute;
   padding: 100px 0 0 20px;
   margin-left: 0px;
-  display: inline;
+  display: block;
   width: 300px;
   text-align: center; }
+  @media screen and (max-width: 320px) {
+    aside {
+      padding: 20px 0 0 0;
+      width: 100px;
+      clear: left; } }
+  aside aside h3 {
+    text-align: center; }
 
 .ad {
   height: 200px;
@@ -104,9 +140,10 @@ aside {
   width: 75px;
   padding: 0;
   margin-left: 0px; }
-
-aside h3 {
-  text-align: center; }
+  @media screen and (max-width: 320px) {
+    .avitar {
+      height: 75px;
+      width: 75px; } }
 
 #social {
   display: block;
@@ -116,20 +153,26 @@ aside h3 {
 
 h2 {
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 4em;
   font-stretch: condensed; }
+  @media screen and (max-width: 320px) {
+    h2 {
+      font-size: 2em; } }
 
 h3 {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: lighter;
   color: #0033cc;
   margin-left: 3PX;
   padding-top: 20px; }
+  @media screen and (max-width: 320px) {
+    h3 {
+      font-size: 1em; } }
 
 .buttonText {
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 1em;
   color: red;
   position: relative;
   top: 300px;
@@ -142,12 +185,11 @@ h3 {
   width: 25%;
   display: absolute;
   float: left; }
-
-.button img {
-  z-index: 1;
-  height: 311px;
-  width: 100%;
-  position: relative; }
+  .button img {
+    z-index: 1;
+    height: 311px;
+    width: 100%;
+    position: relative; }
 
 #buttonTitle {
   text-align: center;
@@ -155,10 +197,12 @@ h3 {
 
 #bottomImages {
   width: 100%; }
-
-.bottomLinks img {
-  display: inline-block;
-  position: relative; }
+  #bottomImages img {
+    display: inline-block;
+    position: relative; }
+    @media screen and (max-width: 320px) {
+      #bottomImages img {
+        clear: both; } }
 
 #navPosts {
   float: right;
@@ -166,6 +210,9 @@ h3 {
   text-align: right;
   position: relative;
   margin-top: 10px; }
+  @media screen and (max-width: 320px) {
+    #navPosts {
+      clear: both; } }
 
 footer {
   width: 100%;
@@ -173,10 +220,13 @@ footer {
   clear: both; }
 
 .footerContainer {
-  max-width: 965px;
+  max-width: 960px;
   height: 100px;
   margin: auto;
   margin-top: 30px; }
+  @media screen and (max-width: 320px) {
+    .footerContainer {
+      max-width: 320px; } }
 
 .logo {
   width: 50px;
@@ -191,3 +241,6 @@ footer {
 
 #copyright {
   margin: 20px; }
+  @media screen and (max-width: 320px) {
+    #copyright {
+      margin: 10px; } }

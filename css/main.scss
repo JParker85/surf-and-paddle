@@ -1,28 +1,74 @@
 @import "../bourbon/bourbon.scss";
 
 // Variables
-$text-color: #0033CC;
-$hover-color: #FF0000;
-$buttonTextColor: #FF0000;
-$border-color: #666666;
-$name-color: #0033CC;
+
+//Text Colors
+$text-Color: #0033CC;
+$hover-Color: #FF0000;
+$button-Color: #FF0000;
+$border-Color: #666666;
+$name-Color: #0033CC;
+
+//Font Variables
+$h1-Size: 6em;
+$h2-Size: 4em;
+$h3-Size: 1em;
+$h5-Size: 1em;
+$p-Size: 1em;
+$a-Size: 1em;
+$body-Size: 1em;
+$button-Size: 1em;
+
+//Responsive Font Variables
+$h1-mSize: 1em;
+$h2-mSize: 2em;
+$h3-mSize: 1em;
+$h5-mSize: 1em;
+$p-mSize: 1em;
+$a-mSize: 1em;
+$body-mSize: 1em;
+$button-mSize: 1em;
+
+// Dimension Variables
+$avitar-Height: 75px;
+$avitar-Width: 75px;
+$header-Height: 400px;
+$header-Width: 100%;
+$h1-Padding-top: 97px;
+
+//Responsive Dimension Variables
+$avitar-mHeight: 75px;
+$avitar-mWidth: 75px;
+$header-mHeight: 100px;
+$header-mWidth: 50%;
+$h1-mPadding-top: 40px;
 
 //Mixin
+//Set property of avitar picture
 @mixin avitar {
   border-radius: 50%;
-  height: 75px;
-  width: 75px;
+  height: $avitar-Height;
+  width: $avitar-Width;
   padding: 0;
+  @media screen and (max-width: 320px){
+    height: $avitar-mHeight;
+    width: $avitar-mWidth;
+  }
   }
 
 header{
 
-  @include background-image(url("../img/sun.jpeg"), linear-gradient( blue 100%, transparent 80%));
+  background-image:  url(../img/sun.jpeg);
   background-size: cover;
-  height: 400px;
+  height: $header-Height;
   overflow: visible;
-  width: 100%;
+  width: $header-Width;
+  display: block;
 
+  @media screen and (max-width: 320px){
+    height: $header-mHeight;
+    width: $header-mWidth;
+  }
 
   }
 
@@ -47,254 +93,296 @@ header{
 
 .title{
 
-  text-align:center;
-  margin-top: 20px;
+    text-align:center;
+    margin-top: 20px;
 
-  }
+    h1{
 
-.title h1{
+    color: white;
+    font-size: $h1-Size;
+    font-weight: lighter;
+    padding-top: $h1-Padding-top;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    @media screen and (max-width: 320px){
+      font-size: $h1-mSize;
+      padding-top: $h1-mPadding-top;
+    }
+    }
 
-  color: white;
-  font-size: 8rem;
-  font-weight: lighter;
-  padding-top: 97px;
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
+    p{
 
-  }
-
-.title p{
-
-  font-weight: lighter;
-  font-family:'Oswald', sans-serif;
-  margin-top: 0;
-
+    font-size: $p-Size;
+    font-weight: lighter;
+    font-family:'Oswald', sans-serif;
+    margin-top: 0;
+    @media screen and (max-width: 320px){
+      font-size: $p-mSize;
+    }
+    }
   }
 
 a:hover{
 
-  color: $hover-color;
+  color: $hover-Color;
 
   }
 
 body{
-
+  font-size: $body-Size;
   margin: 0 auto;
   font-family: 'Oswald', sans-serif;
   font-family: 'Open Sans', sans-serif;
-
+  @media screen and (max-width: 320px){
+    font-size: $body-mSize;
+  }
   }
 
 .container{
 
-  max-width:965px;
+  max-width: 960px;
   margin: auto;
   overflow: hidden;
-
+  @media screen and (max-width: 320px){
+    max-width: 320px;
+  }
   }
 
 article{
 
   float: left;
-  width: 65%;
+  width: 60%;
   padding: 30px;
   margin: 0px;
-
+  overflow: auto;
+  @media screen and (max-width: 320px){
+    width: 100%;
+    margin: 0 20px 0 10px;
+    bottom: 34px;
+  }
   }
 
 .name{
 
-  color: $name-color;
+  color: $name-Color;
   }
 
-.post img{
+.post {
+    padding: 0px;
+    margin-top: 57px;
+    float: bottom;
 
-  @include avitar;
-  float: left;
-  margin: 0 20px 0 10px;
-  display: inline-block;
-  position: relative;
-  bottom: 34px;
+  img  {
+      @include avitar;
+      float: left;
+      margin: 0 20px 0 10px;
+      display: inline-block;
+      position: relative;
+      bottom: 34px;
+    }
+
+  @media screen and (max-width: 320px){
+    margin-top: 10px;
 
   }
-
-.post{
-
-  padding: 0px;
-  margin-top: 57px;
-  float: bottom;
 
   }
 
 aside{
 
-  float: left;
-  position:absolute;
-  padding: 100px 0 0 20px;
-  margin-left: 0px;
-  display: inline;
-  width: 300px;
-  text-align: center;
+    float: left;
+    position:absolute;
+    padding: 100px 0 0 20px;
+    margin-left: 0px;
+    display: block;
+    width: 300px;
+    text-align: center;
 
+    @media screen and (max-width: 320px){
+      padding: 20px 0 0 0;
+      width: 100px;
+      // float:left;
+      clear:left;
+    }
+
+    aside h3{
+
+      text-align: center;
+
+    }
   }
 
 .ad{
 
-  height: 200px;
-  width: 300px;
+    height: 200px;
+    width: 300px;
 
   }
 
 .adLink {
 
-  text-align: left;
-  float:right;
-  clear:right;
-  margin-left: 10px;
+    text-align: left;
+    float:right;
+    clear:right;
+    margin-left: 10px;
 
   }
 
 .border{
 
-  border-left-style: solid;
-  border-width: 2px;
-  border-color: $border-color;
+    border-left-style: solid;
+    border-width: 2px;
+    border-color: $border-Color;
 
   }
 
 .avitar{
 
-  @include avitar;
-  margin-left: 0px;
+    @include avitar;
+    margin-left: 0px;
 
   }
 
-aside h3{
+#social{
 
-  text-align: center;
-
-  }
-
- #social{
-
-  display: block;
-  margin-left: 56px;
-  text-align: left;
-  padding-bottom: 39px;
+    display: block;
+    margin-left: 56px;
+    text-align: left;
+    padding-bottom: 39px;
 
   }
 
 h2{
 
-  text-transform: uppercase;
-  font-size: 4rem;
-  font-stretch: condensed;
-
+    text-transform: uppercase;
+    font-size: $h2-Size;
+    font-stretch: condensed;
+    @media screen and (max-width: 320px){
+      font-size: $h2-mSize;
+    }
   }
 
 h3{
 
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: lighter;
-  color: $text-color;
-  margin-left: 3PX;
-  padding-top: 20px;
+    text-transform: uppercase;
+    font-size: $h3-Size;
+    font-weight: lighter;
+    color: $text-Color;
+    margin-left: 3PX;
+    padding-top: 20px;
+    @media screen and (max-width: 320px){
+      font-size: $h3-mSize;
+    }
 
   }
 
 .buttonText{
 
-  text-transform: uppercase;
-  font-size: 2em;
-  color: $buttonTextColor;
-  position: relative;
-  top: 300px;
-  display: inline-block;
-  z-index: 2;
-  margin: 0;
-  padding: 0;
+    text-transform: uppercase;
+    font-size: $button-Size;
+    color: $button-Color;
+    position: relative;
+    top: 300px;
+    display: inline-block;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
 
   }
 
 .button{
 
-  width:25%;
-  display: absolute;
-  float:left;
+    width:25%;
+    display: absolute;
+    float:left;
 
-  }
+    img{
 
-.button img{
+    z-index: 1;
+    height: 311px;
+    width: 100%;
+    position: relative;
 
-  z-index: 1;
-  height: 311px;
-  width: 100%;
-  position: relative;
-
-  }
+    }
+    }
 
 #buttonTitle{
 
-  text-align: center;
-  margin-bottom: 0;
+    text-align: center;
+    margin-bottom: 0;
 
-  }
+    }
 
 #bottomImages{
 
-  width: 100%;
+    width: 100%;
 
+    img{
+
+    display: inline-block;
+    position: relative;
+    @media screen and (max-width: 320px){
+
+      clear:both;
+    }
   }
-
-.bottomLinks img{
-
-  display: inline-block;
-  position: relative;
-
   }
 
 #navPosts{
 
-  float:right;
-  clear: both;
-  text-align: right;
-  position: relative;
-  margin-top: 10px;
+    float:right;
+    clear: both;
+    text-align: right;
+    position: relative;
+    margin-top: 10px;
+    @media screen and (max-width: 320px){
+
+      clear:both;
   }
+}
 
 footer{
-  width: 100%;
-  display: block;
-  clear: both;
+
+    width: 100%;
+    display: block;
+    clear: both;
+
 }
 
 .footerContainer{
 
-  max-width: 965px;
-  height: 100px;
-  margin: auto;
-  margin-top: 30px;
-
+    max-width: 960px;
+    height: 100px;
+    margin: auto;
+    margin-top: 30px;
+    @media screen and (max-width: 320px){
+      max-width: 320px;
+    }
   }
 
 .logo {
-  width: 50px;
-  vertical-align: middle;
-  display: inline;
-  position: relative;
-  top: 0;
-  left: 0;
+
+    width: 50px;
+    vertical-align: middle;
+    display: inline;
+    position: relative;
+    top: 0;
+    left: 0;
 
   }
 
 #footerImg{
 
-  float: left;
+    float: left;
+
   }
 
 
 #copyright{
 
-  margin: 20px;
+    margin: 20px;
+
+    @media screen and (max-width: 320px){
+      margin: 10px;
+}
   }

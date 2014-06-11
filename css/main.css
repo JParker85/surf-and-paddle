@@ -104,8 +104,7 @@ article {
       margin-top: 10px; } }
 
 aside {
-  float: left;
-  position: absolute;
+  float: right;
   padding: 100px 0 0 20px;
   margin-left: 0px;
   display: block;
@@ -114,7 +113,9 @@ aside {
   @media screen and (max-width: 320px) {
     aside {
       padding: 20px 0 0 0;
+      position: absolute;
       width: 100px;
+      float: left;
       clear: left; } }
   aside aside h3 {
     text-align: center; }
